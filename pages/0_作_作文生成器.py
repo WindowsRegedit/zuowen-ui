@@ -53,7 +53,6 @@ def generate_next_token(input_ids):
     return next_token_id
 
 
-@st.cache(show_spinner=False)
 def generate(max_len):
     title_ids = tokenizer.encode(title, add_special_tokens=False)
     context_ids = tokenizer.encode(context, add_special_tokens=False)
