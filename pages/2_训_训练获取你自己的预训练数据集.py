@@ -1,3 +1,7 @@
+import os
+import sys
+sys.path.append(os.path.dirname(os.getcwd()))
+
 import pickle
 import tempfile
 from datetime import datetime
@@ -9,9 +13,9 @@ import transformers
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from transformers import GPT2LMHeadModel, CpmTokenizer
-from zuowen.data_parallel import BalancedDataParallel
-from zuowen.dataset import CPMDataset
-from zuowen.utils import *
+from data_parallel import BalancedDataParallel
+from dataset import CPMDataset
+from utils import *
 
 st.sidebar.warning("想要获取与训练数据集，需要先预先将作文整合为pkl文件，请先使用前面一个工具进行转换！")
 

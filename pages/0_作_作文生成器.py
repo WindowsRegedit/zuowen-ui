@@ -1,4 +1,7 @@
 import streamlit as st
+import os
+import sys
+sys.path.append(os.path.dirname(os.getcwd()))
 
 
 st.title("作文生成器")
@@ -92,7 +95,7 @@ if st.button("开始自动写作"):
     with st.spinner("正在生成中，请稍等......"):
         from transformers import GPT2LMHeadModel, CpmTokenizer
 
-        from zuowen.utils import *
+        from utils import *
 
         os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7,8,9"
         cuda = torch.cuda.is_available()

@@ -1,10 +1,13 @@
 import os
+import sys
+sys.path.append(os.path.dirname(os.getcwd()))
 import pickle
 
 import streamlit as st
 from transformers import CpmTokenizer
 
-from zuowen.utils import absolute_path
+from utils import absolute_path
+
 
 st.title("作文整合器")
 st.subheader("吴凡的作文整合器")
